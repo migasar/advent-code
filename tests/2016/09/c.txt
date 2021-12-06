@@ -1,3 +1,0 @@
-(3x3)XYZ
-9  # len("XYZXYZXYZ")
-9

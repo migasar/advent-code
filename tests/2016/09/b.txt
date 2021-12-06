@@ -1,3 +1,0 @@
-A(1x5)BC
-7  # len("ABBBBBC")
--

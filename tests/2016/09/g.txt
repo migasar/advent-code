@@ -1,3 +1,0 @@
-X(8x2)(3x3)ABCY
--
-20  # len("XABCABCABCABCABCABCY")

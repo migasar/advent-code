@@ -1,0 +1,43 @@
+# OS generated files #
+.DS_Store
+
+# IDE #
+.idea
+*.vscode
+.code-workspace
+
+
+# Python related #
+# virtual env #
+.python-version
+
+# tests #
+.pytest_cache
+__pycache__
+**/__pycache__/
+.coverage
+
+# Jupiter Notebook #
+*checkpoint.ipynb
+.ipynb_checkpoints
+
+# Machine Learning #
+mlruns
+
+
+# Varia #
+*.gz
+*PKG-INFO
+*.egg-info
+*.zip
+# *.csv
+# *.txt
+
+
+# files reserved for local repo #
+.env
+venv/
+raw_data/
+
+aoc_wim/
+tests_wim/
