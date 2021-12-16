@@ -1,4 +1,4 @@
-"""Day 6: Lanternfish"""
+"""IN PROGRESS | Day 6: Lanternfish"""
 
 
 # Input

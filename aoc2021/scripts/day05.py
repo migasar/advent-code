@@ -4,7 +4,7 @@ import numpy as np
 import parse
 
 
-# Input
+# Set Input
 input_ex = """0,9 -> 5,9
 8,0 -> 0,8
 9,4 -> 3,4
@@ -16,13 +16,13 @@ input_ex = """0,9 -> 5,9
 0,0 -> 8,8
 5,5 -> 8,2"""
 
-input_ = input_ex
+puzzle_input = input_ex
 
 
-def format_input(input_):
+def parse(puzzle_input):
     """Transform raw input in list of dict of coordinates"""
 
-    lines = input_.splitlines()
+    lines = puzzle_input.splitlines()
     coords = []
     pattern = "{x1:d},{y1:d} -> {x2:d},{y2:d}"
 
@@ -33,9 +33,9 @@ def format_input(input_):
     return coords
 
 
-# Part One
-def count_straight_overlaps(coords):
-    """Set a grid" and count overlaps of
+def part1(coords):
+    """Solve part 1
+    Set a grid" and count overlaps of
     (vertical and horizontal) segments on that grid
     """
 
@@ -53,13 +53,12 @@ def count_straight_overlaps(coords):
                 grid[line['y1'], i] += 1
 
     overlaps = grid[grid >= 2]
-
     return overlaps
 
 
-# Part Two
-def count_diagonalized_overlaps(coords):
-    """Set a grid" and count overlaps of
+def part2(coords):
+    """Solve part 2
+    Set a grid and count overlaps of
     (vertical, horizontal and diagonal) segments on that grid
     """
 
@@ -70,7 +69,6 @@ def count_diagonalized_overlaps(coords):
             y = [line['y1'], line['y2']]
             for i in range(min(y), max(y)+1):
                 grid[i, line['x1']] += 1
-
         if line['y1'] == line['y2']:
             x = [line['x1'], line['x2']]
             for i in range(min(x), max(x)+1):
@@ -93,5 +91,13 @@ def count_diagonalized_overlaps(coords):
                 grid[s[1], s[0]] += 1
 
     overlaps = grid[grid >= 2]
-
     return overlaps
+
+
+def solve(puzzle_input):
+    """Solve the puzzle for the given input"""
+    data = parse(puzzle_input)
+    solution1 = part1(data)
+    solution2 = part2(data)
+
+    return solution1, solution2

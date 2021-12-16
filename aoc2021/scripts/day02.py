@@ -1,10 +1,11 @@
 """Day 2: Dive"""
+
 import parse
 
 
-# Transform raw input in list of string values
-def sanitized_input(raw_input):
-    """Sanitize input"""
+# Parse Input
+def parse_input(raw_input):
+    """Transform raw input in list of string values"""
     return raw_input.splitlines()
 
 

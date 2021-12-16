@@ -1,8 +1,5 @@
 """Day 10: Syntax Scoring"""
 
-import pathlib
-import sys
-
 
 # Set Input
 input_ex = """[({(<(())[]>[[{[]{<()<>>
@@ -102,11 +99,3 @@ def solve(puzzle_input):
     solution2 = part2(data)
 
     return solution1, solution2
-
-
-if __name__ == "__main__":
-    for path in sys.argv[1:]:
-        print(f"{path}:")
-        puzzle_input = pathlib.Path(path).read_text().strip()
-        solutions = solve(puzzle_input)
-        print("\n".join(str(solution) for solution in solutions))
