@@ -37,7 +37,12 @@ mlruns
 # files reserved for local repo #
 .env
 venv/
-raw_data/
 
+raw_data/
+data/
+tests/
+
+wim/
 aoc_wim/
 tests_wim/
+day_template/
